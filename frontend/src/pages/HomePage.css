@@ -1,0 +1,698 @@
+/* =========================================================
+   SMART QUEUE MANAGEMENT SYSTEM
+   HOME PAGE UI
+   ========================================================= */
+
+* {
+  box-sizing: border-box;
+}
+
+.home-page {
+  min-height: 100vh;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 45px 25px;
+
+  background:
+    radial-gradient(
+      circle at 10% 20%,
+      rgba(38, 198, 218, 0.35),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 90% 80%,
+      rgba(13, 110, 253, 0.35),
+      transparent 30%
+    ),
+    linear-gradient(
+      135deg,
+      #071a3d 0%,
+      #0b3475 45%,
+      #087f8c 100%
+    );
+
+  font-family:
+    "Segoe UI",
+    Tahoma,
+    Geneva,
+    Verdana,
+    sans-serif;
+}
+
+
+/* =========================================================
+   BACKGROUND CIRCLES
+   ========================================================= */
+
+.background-circle {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(2px);
+  opacity: 0.18;
+  pointer-events: none;
+}
+
+.circle-one {
+  width: 300px;
+  height: 300px;
+  background: #20c997;
+  top: -120px;
+  left: -100px;
+}
+
+.circle-two {
+  width: 420px;
+  height: 420px;
+  background: #0d6efd;
+  bottom: -220px;
+  right: -150px;
+}
+
+.circle-three {
+  width: 180px;
+  height: 180px;
+  background: #ffffff;
+  top: 25%;
+  right: 5%;
+}
+
+
+/* =========================================================
+   MAIN CONTAINER
+   ========================================================= */
+
+.home-container {
+  width: 100%;
+  max-width: 1180px;
+
+  position: relative;
+  z-index: 2;
+
+  padding: 42px;
+
+  border: 1px solid rgba(255, 255, 255, 0.18);
+
+  border-radius: 30px;
+
+  background: rgba(255, 255, 255, 0.94);
+
+  box-shadow:
+    0 30px 80px rgba(0, 0, 0, 0.25);
+
+  backdrop-filter: blur(20px);
+}
+
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.home-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 18px;
+
+  text-align: left;
+}
+
+.bank-icon {
+  width: 75px;
+  height: 75px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 22px;
+
+  color: white;
+
+  background:
+    linear-gradient(
+      135deg,
+      #0d6efd,
+      #20c997
+    );
+
+  box-shadow:
+    0 12px 30px rgba(13, 110, 253, 0.3);
+
+  font-size: 38px;
+}
+
+.home-header h1 {
+  margin: 0;
+
+  color: #102a43;
+
+  font-size: 42px;
+  font-weight: 800;
+
+  letter-spacing: -1px;
+}
+
+.home-header h2 {
+  margin: 2px 0 0;
+
+  color: #0d6efd;
+
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.home-subtitle {
+  text-align: center;
+
+  margin: 18px 0 38px;
+
+  color: #627d98;
+
+  font-size: 17px;
+}
+
+
+/* =========================================================
+   PORTAL SECTION
+   ========================================================= */
+
+.portal-section {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  gap: 28px;
+}
+
+
+/* =========================================================
+   PORTAL CARDS
+   ========================================================= */
+
+.portal-card {
+  position: relative;
+
+  padding: 35px;
+
+  border-radius: 24px;
+
+  background: #ffffff;
+
+  border: 1px solid #e6edf5;
+
+  box-shadow:
+    0 12px 35px rgba(16, 42, 67, 0.08);
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.portal-card:hover {
+  transform: translateY(-7px);
+
+  box-shadow:
+    0 22px 45px rgba(16, 42, 67, 0.14);
+}
+
+
+/* =========================================================
+   PORTAL ICON
+   ========================================================= */
+
+.portal-icon {
+  width: 68px;
+  height: 68px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 20px;
+
+  font-size: 32px;
+
+  margin-bottom: 20px;
+}
+
+.customer-icon {
+  color: #0d6efd;
+
+  background:
+    rgba(13, 110, 253, 0.10);
+}
+
+.admin-icon {
+  color: #198754;
+
+  background:
+    rgba(25, 135, 84, 0.10);
+}
+
+
+/* =========================================================
+   LABEL
+   ========================================================= */
+
+.portal-label {
+  display: inline-block;
+
+  margin-bottom: 8px;
+
+  color: #0d6efd;
+
+  font-size: 12px;
+  font-weight: 800;
+
+  letter-spacing: 1.5px;
+}
+
+.admin-label {
+  color: #198754;
+}
+
+
+/* =========================================================
+   CARD TEXT
+   ========================================================= */
+
+.portal-card h3 {
+  margin: 0 0 12px;
+
+  color: #102a43;
+
+  font-size: 28px;
+  font-weight: 750;
+}
+
+.portal-card p {
+  min-height: 52px;
+
+  margin-bottom: 25px;
+
+  color: #627d98;
+
+  line-height: 1.6;
+
+  font-size: 15px;
+}
+
+
+/* =========================================================
+   FEATURE LIST
+   ========================================================= */
+
+.feature-list {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 11px;
+
+  margin-bottom: 28px;
+}
+
+.feature-list div {
+  display: flex;
+
+  align-items: center;
+
+  gap: 11px;
+
+  color: #486581;
+
+  font-size: 14px;
+}
+
+.feature-list i {
+  width: 27px;
+  height: 27px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 8px;
+
+  background: #f0f6ff;
+
+  color: #0d6efd;
+}
+
+.admin-card .feature-list i {
+  color: #198754;
+
+  background: #eefaf4;
+}
+
+
+/* =========================================================
+   MAIN BUTTON
+   ========================================================= */
+
+.main-button {
+  width: 100%;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 12px;
+
+  border: none;
+
+  border-radius: 13px;
+
+  padding: 14px 20px;
+
+  color: white;
+
+  font-size: 16px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.main-button:hover {
+  transform: translateY(-2px);
+}
+
+.main-button i {
+  transition: transform 0.2s ease;
+}
+
+.main-button:hover i {
+  transform: translateX(5px);
+}
+
+.customer-button {
+  background:
+    linear-gradient(
+      135deg,
+      #0d6efd,
+      #0878e8
+    );
+
+  box-shadow:
+    0 8px 20px rgba(13, 110, 253, 0.25);
+}
+
+.admin-button {
+  background:
+    linear-gradient(
+      135deg,
+      #198754,
+      #20a36a
+    );
+
+  box-shadow:
+    0 8px 20px rgba(25, 135, 84, 0.25);
+}
+
+
+/* =========================================================
+   SECONDARY BUTTON
+   ========================================================= */
+
+.secondary-button {
+  width: 100%;
+
+  margin-top: 11px;
+
+  padding: 12px 20px;
+
+  border-radius: 13px;
+
+  background: white;
+
+  font-size: 14px;
+  font-weight: 650;
+
+  cursor: pointer;
+
+  transition: all 0.2s ease;
+}
+
+.customer-secondary {
+  border: 1px solid #b8d4ff;
+
+  color: #0d6efd;
+}
+
+.customer-secondary:hover {
+  background: #f3f8ff;
+}
+
+
+/* =========================================================
+   ADMIN NOTE
+   ========================================================= */
+
+.admin-note {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 8px;
+
+  margin-top: 14px;
+
+  color: #6c8a78;
+
+  font-size: 12px;
+}
+
+.admin-note i {
+  color: #198754;
+
+  font-size: 15px;
+}
+
+
+/* =========================================================
+   SYSTEM FEATURES
+   ========================================================= */
+
+.system-features {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  margin-top: 38px;
+
+  padding: 20px;
+
+  border-radius: 18px;
+
+  background: #f6f9fc;
+
+  border: 1px solid #e7edf3;
+}
+
+.system-feature {
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  min-width: 190px;
+}
+
+.small-feature-icon {
+  width: 42px;
+  height: 42px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 12px;
+
+  color: #0d6efd;
+
+  background: white;
+
+  box-shadow:
+    0 5px 15px rgba(16, 42, 67, 0.08);
+
+  font-size: 19px;
+}
+
+.system-feature strong {
+  display: block;
+
+  color: #243b53;
+
+  font-size: 14px;
+}
+
+.system-feature span {
+  display: block;
+
+  margin-top: 2px;
+
+  color: #829ab1;
+
+  font-size: 12px;
+}
+
+.feature-divider {
+  width: 1px;
+  height: 35px;
+
+  margin: 0 35px;
+
+  background: #d9e2ec;
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+.home-footer {
+  text-align: center;
+
+  margin-top: 30px;
+}
+
+.footer-line {
+  width: 70px;
+  height: 3px;
+
+  margin: 0 auto 15px;
+
+  border-radius: 10px;
+
+  background:
+    linear-gradient(
+      90deg,
+      #0d6efd,
+      #20c997
+    );
+}
+
+.home-footer p {
+  margin: 0;
+
+  color: #486581;
+
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.home-footer p i {
+  margin-right: 6px;
+
+  color: #0d6efd;
+}
+
+.home-footer span {
+  display: block;
+
+  margin-top: 5px;
+
+  color: #9fb3c8;
+
+  font-size: 11px;
+}
+
+
+/* =========================================================
+   RESPONSIVE DESIGN
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+  .home-container {
+    padding: 30px;
+  }
+
+  .portal-section {
+    grid-template-columns: 1fr;
+  }
+
+  .home-header h1 {
+    font-size: 34px;
+  }
+
+  .system-features {
+    flex-direction: column;
+
+    gap: 20px;
+  }
+
+  .feature-divider {
+    width: 80%;
+    height: 1px;
+
+    margin: 0;
+  }
+
+}
+
+
+@media (max-width: 600px) {
+
+  .home-page {
+    padding: 20px 12px;
+  }
+
+  .home-container {
+    padding: 24px 18px;
+
+    border-radius: 22px;
+  }
+
+  .home-header {
+    flex-direction: column;
+
+    text-align: center;
+  }
+
+  .home-header h1 {
+    font-size: 29px;
+  }
+
+  .home-header h2 {
+    font-size: 19px;
+  }
+
+  .home-subtitle {
+    font-size: 14px;
+
+    margin-bottom: 25px;
+  }
+
+  .portal-card {
+    padding: 25px 20px;
+  }
+
+  .portal-card h3 {
+    font-size: 24px;
+  }
+
+  .system-feature {
+    width: 100%;
+
+    justify-content: flex-start;
+  }
+
+}
